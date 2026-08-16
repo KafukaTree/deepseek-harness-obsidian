@@ -1,0 +1,9 @@
+{
+  "id": "deepseek-harness",
+  "name": "DeepSeek Harness",
+  "version": "0.1.1",
+  "minAppVersion": "1.8.0",
+  "description": "Embed the official DeepSeek Harness interface into an Obsidian-native knowledge workspace.",
+  "author": "Shaobowen",
+  "isDesktopOnly": true
+}

@@ -1,0 +1,6 @@
+node_modules/
+.sandbox/
+.DS_Store
+*.log
+deepseek-harness-obsidian.zip
+deepseek-harness-obsidian-*.zip

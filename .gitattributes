@@ -1,0 +1,3 @@
+dist/main.js linguist-generated=true
+dist/styles.css linguist-generated=true
+dist/plugins/** linguist-vendored=true
