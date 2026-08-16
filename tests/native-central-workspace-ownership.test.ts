@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile, readdir } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
-import { join, relative } from "node:path";
+import { join, relative, sep } from "node:path";
 import test from "node:test";
 
 const pluginRoot = fileURLToPath(new URL("../", import.meta.url));
@@ -44,7 +44,7 @@ test("the active shell owns one official DSH host and one native AI workbench", 
 
 test("the published source tree contains only modules reachable from the active shell", async () => {
   const files = await typescriptFiles(join(pluginRoot, "src"));
-  assert.deepEqual(files.map((path) => relative(pluginRoot, path)), [
+  assert.deepEqual(files.map((path) => relative(pluginRoot, path).split(sep).join("/")), [
     "src/companion/agent-workbench-view.ts",
     "src/companion/file-tree-bridge.ts",
     "src/companion/gui/embedded-root.ts",

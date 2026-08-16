@@ -13,7 +13,7 @@ test("active stylesheet contains only the right host, native tree and standalone
 test("retired knowledge-object management CSS does not ship", async () => {
   const css = await readFile(new URL("../styles.css", import.meta.url), "utf8");
   assert.doesNotMatch(css, /\.dsh-object-manager|\.dsh-companion__context/);
-  assert.ok(css.length < 11_000);
+  assert.ok(css.replace(/\r\n/g, "\n").length < 11_000);
 });
 
 test("retired artifact capture modal CSS does not ship", async () => {
